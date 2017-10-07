@@ -1,0 +1,157 @@
+.tabs {
+  color: @color-light;
+  background-color: @color-bg;
+}
+
+.tabs__controls {
+  .visually-hidden;
+}
+
+.tabs__intro {
+  padding: @main-padding;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.tabs__nav {
+  text-align: center;
+  position: relative;
+
+  text-align: center;
+
+  border-bottom: @tab-base-border-style;
+
+  line-height: @menu-item-height;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+
+.tabs__label-open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .15);
+}
+
+
+.tabs__label {
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+
+  color: @color-label-inactive;
+  background-color: @color-label-bg-inactive;
+  overflow-y: hidden;
+
+  max-height: 0;
+
+  transition: color @tab-transition-duration, background-color @tab-transition-duration, max-height @tab-transition-duration;
+
+  &:hover {
+    color: @color-label-active;
+  }
+  @media (min-width: 768px) {
+    position: relative;
+
+    padding: @tab-padding 0;
+
+    border-right: @tab-base-border-style;
+    box-shadow: 0 -2px 2px rgba(0, 0, 0, .05);
+
+    font-size: .875em;
+
+    flex-grow: 1;
+    max-height: @menu-item-height;
+    overflow-y: visible;
+
+    &::after {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+
+      width: 100%;
+      height: 0;
+
+      content: "";
+      transition-duration: @tab-transition-duration;
+      transition-property: height;
+
+      background-color: @color-border-top;
+    }
+
+    &:hover {
+      margin-top: -1px;
+      padding-top: @tab-padding + 1;
+
+      transition: none;
+      &::after {
+        height: @btn-border-top-thickness;
+      }
+    }
+  }
+}
+
+.tabs__label-close {
+  display: block;
+  overflow-y: hidden;
+
+  max-height: 0;
+
+  cursor: pointer;
+  transition: color @tab-transition-duration, background-color @tab-transition-duration, max-height @tab-transition-duration;
+
+  color: @color-label-bg-inactive;
+  background-color: @color-text;
+
+  &:hover {
+    color: darken(@color-label-bg-inactive, 10%);
+    background-color: darken(@color-text, 10%);
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+#nav-ctrl:checked ~ .tabs__nav {
+  .tabs__label,
+  .tabs__label-close {
+    max-height: @menu-item-height;
+  }
+  .tabs__label-open {
+    display: none;
+  }
+}
+
+.make-tabs-label(@tab-count);
+
+.tabs__wrapper {
+  padding-right: 2%;
+  padding-left: 2%;
+
+  color: @color-text;
+  background-color: @color-light;
+}
+
+.tabs__tab-content {
+  overflow-y: hidden;
+
+  max-height: 0;
+
+  transition: opacity @panel-transition-duration;
+
+  opacity: 0;
+}
+
+.make-tabs-content(@tab-count);
