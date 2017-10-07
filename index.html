@@ -4,9 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Tabs</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  
+  <main class="tabs">
+    <input class="tabs__controls" id="tab-1-ctrl" type="radio" name="tab-radios" checked>
+    <input class="tabs__controls" id="tab-2-ctrl" type="radio" name="tab-radios">
+    <input class="tabs__controls" id="tab-3-ctrl" type="radio" name="tab-radios">
+    <input class="tabs__controls" id="tab-4-ctrl" type="radio" name="tab-radios">
+    <input class="tabs__controls" id="tab-5-ctrl" type="radio" name="tab-radios">
+    <input class="tabs__controls" id="nav-ctrl" type="checkbox" name="nav-checkbox">
+
+    <header class="tabs__intro">
+      <h1>Табы без JS</h1>
+    </header>
+
+    <nav class="tabs__nav">
+      <label class="tabs__label-open" for="nav-ctrl"></label>
+      <label class="tabs__label" for="tab-1-ctrl">Первая вкладка</label>
+      <label class="tabs__label" for="tab-2-ctrl">Вторая вкладка</label>
+      <label class="tabs__label" for="tab-3-ctrl">Третья вкладка</label>
+      <label class="tabs__label" for="tab-4-ctrl">Предпоследняя</label>
+      <label class="tabs__label" for="tab-5-ctrl">Последняя</label>
+      <label class="tabs__label-close" for="nav-ctrl">&times;</label>
+    </nav>
+
+    <article class="tabs__wrapper">
+      <section class="tabs__tab-content" id="tab-1">
+        <h2>Первая вкладка</h2>
+        <p>Организация слубы маркетинга продуцирует креатив. Позиционирование на рынке уравновешивает инвестиционный продукт. Создание приверженного покупателя интуитивно создает фирменный стиль, осознав маркетинг как часть производства. Рекламный блок уравновешивает фирменный повторный контакт.</p>
+        <p>Тем не менее, концепция развития спорадически позиционирует конструктивный ребрендинг. Узнавание бренда как всегда непредсказуемо. Показ баннера, суммируя приведенные примеры, подсознательно ускоряет медиамикс, не считаясь с затратами. Надо сказать, что целевая аудитория вырождена.</p>
+        <p>Имидж подсознательно синхронизирует нестандартный подход, не считаясь с затратами. Эволюция мерчандайзинга требовальна к креативу. Молодежная аудитория определяет диктат потребителя, используя опыт предыдущих кампаний. Надо сказать, что партисипативное планирование достижимо в разумные сроки.</p>
+      </section>
+      <section class="tabs__tab-content" id="tab-2">
+        <h2>А вот и вторая</h2>
+        <p>Рекламный макет деятельно усиливает ролевой контент, полагаясь на инсайдерскую информацию. Побочный PR-эффект, как принято считать, стабилизирует эксклюзивный контент, не считаясь с затратами. Узнаваемость марки, конечно, разнородно тормозит бренд.</p>
+        <p>Позиционирование на рынке, на первый взгляд, настроено позитивно. Создание приверженного покупателя ускоряет эмпирический процесс стратегического планирования. Дело в том, что восприятие марки индуцирует стиль менеджмента.</p>
+      </section>
+      <section class="tabs__tab-content" id="tab-3">
+        <h2>Третья вкладка</h2>
+        <p>А вот по мнению аналитиков визуализация концепии порождена временем. Стратегическое планирование недостижимо. Маркетинговая коммуникация, отбрасывая подробности, транслирует культурный рекламоноситель.</p>
+      </section>
+      <section class="tabs__tab-content" id="tab-4">
+        <h2>Вкладка №4</h2>
+        <p>Имиджевая реклама, вопреки мнению П.Друкера, откровенна. Инвестиционный продукт создает конвергентный потребительский рынок. Объемная скидка, не меняя концепции, изложенной выше, многопланово восстанавливает целевой сегмент рынка.</p>
+      </section>
+      <section class="tabs__tab-content" id="tab-5">
+        <h2>Последняя вкладка</h2>
+        <p>Несмотря на сложности, точечное воздействие подсознательно тормозит традиционный канал. Рекламная кампания, в рамках сегодняшних воззрений, актаульна как никогда. Реклама, в рамках сегодняшних воззрений, изоморфна времени.</p>
+      </section>
+    </article>
+  </main>
 </body>
 </html>
