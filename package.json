@@ -1,0 +1,19 @@
+{
+  "name": "tabs",
+  "version": "1.0.0",
+  "description": "css tabs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokerinteractive/tabs.git"
+  },
+  "author": "a@jokerinteractive.ru",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/jokerinteractive/tabs/issues"
+  },
+  "homepage": "https://github.com/jokerinteractive/tabs#readme"
+}
